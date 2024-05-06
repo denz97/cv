@@ -70,6 +70,28 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #ff004f;
 }
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid #ff004f;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    width: 100%;
+    animation: typing 5s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: #ff004f; }
+    50% { border-color: black; }
+}
+
+.cursor {
+    display: inline-block;
+}
 /* -----------about--------------- */
 #about{
     padding: 80px 0;
@@ -328,9 +350,6 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
-    #header{
-        background-image: url(images/phone-background.png);
-    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
