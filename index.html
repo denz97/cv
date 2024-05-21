@@ -181,13 +181,12 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> 0123456789</p>
+                <p><i class="fas fa-paper-plane"></i><a href="mailto:zubko.denys@gmail.com" style="color: inherit; text-decoration: none;">zubko.denys@gmail.com</a></p>
+                <p><i class="fas fa-phone-square-alt"></i><a href="tel:+13606607676" style="color: inherit; text-decoration: none;">+1(360) 660-76-76</a></p>
                 <div class="social-icons">
-                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100010005917274"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/zubko_denys?igsh=MW41cXVxNDhsNTM3"><i class="fab fa-instagram"></i></a>
+                    <a href="www.linkedin.com/in/denys-zubko-aa213a181"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
@@ -207,9 +206,8 @@
 
 
 <script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tabname){
         for(tablink of tablinks){
@@ -221,12 +219,10 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-
 </script>
 
 <script>
-
-    var sidemeu = document.getElementById("sidemenu");
+    let sidemeu = document.getElementById("sidemenu");
 
     function openmenu(){
         sidemeu.style.right = "0";
@@ -234,13 +230,12 @@
     function closemenu(){
         sidemeu.style.right = "-200px";
     }
-
 </script>
 <script>
     const scriptURL = '< add you own link here >' // add your own app script link here
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
-  
+
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
