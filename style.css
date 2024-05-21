@@ -201,7 +201,10 @@ nav ul li a:hover::after{
     grid-column: span 2; /* Span two columns */
 }
 /* -------portfolio----------- */
-#portfolio{
+#commercial-portfolio{
+    padding: 30px 0;
+}
+#own-portfolio{
     padding: 50px 0;
 }
 .work-list{
