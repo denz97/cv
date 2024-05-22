@@ -333,6 +333,10 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+.btn.btn2.clicked{
+    background: #b54769;
+    border-color: #b54769;
+}
 .copyright{
     width: 100%;
     text-align: center;

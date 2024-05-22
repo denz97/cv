@@ -24,8 +24,7 @@
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>AQA Engineer</p>
-            <h1 class="typewriter">Hi, I'm <span>Denys</span><br>Zubko From Ukraine</h1>
+            <h1 class="typewriter">Hi, I'm <span>Denys</span><br>Zubko an AQA engineer</h1>
         </div>
     </div>
 </div>
@@ -38,7 +37,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>I am an experienced AQA Engineer with expertise in both automated and manual testing. My robust testing skills are complemented by a strong leadership background, having effectively led small teams to achieve superior quality benchmarks. I am adept at creating and implementing detailed testing strategies that significantly enhance product functionality and user experience.</p>
+                <p>I am an experienced AQA Engineer with expertise in both automation and manual testing. My robust testing skills are complemented by a strong leadership background, having effectively led small teams to achieve superior quality benchmarks. I am adept at creating and implementing detailed testing strategies that significantly enhance product functionality and user experience.</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -201,13 +200,16 @@
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright © Denys Zubko 2024.</p>
+    </div>
 </div>
 
 
 
 <script>
-    let tablinks = document.getElementsByClassName("tab-links");
-    let tabcontents = document.getElementsByClassName("tab-contents");
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tabname){
         for(tablink of tablinks){
@@ -220,34 +222,39 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
-
 <script>
-    let sidemeu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemeu.style.right = "0";
-    }
-    function closemenu(){
-        sidemeu.style.right = "-200px";
-    }
+    const button = document.querySelector('.btn.btn2');
+    button.onmousedown = () => button.classList.add('clicked');
+    button.onmouseup = () => button.classList.remove('clicked');
 </script>
 <script>
-    const scriptURL = '< add you own link here >' // add your own app script link here
+    let sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzUw2o0rNL2LH4sCnL6_ogC188pjQ6r0ITrwg_ZVdRyEMohuiyJpwfts_PrON79X3RXxQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
 </body>
 </html>
